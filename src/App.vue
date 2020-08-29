@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "pizza",
+  name: "segundos",
 
   data() {
     return {
