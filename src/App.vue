@@ -27,10 +27,7 @@ export default {
     iniciar(time) {
       this.contadorSeg = time;
       clearInterval(this.myIntervalo);
-      this.myIntervalo = setInterval(() => {this.contadorSeg > 0 ? this.contadorSeg-- : false;}, 1000);
-      setTimeout(() => {
-        clearInterval(this.myIntervalo);
-      }, (time + 1) * 1000);
+      this.myIntervalo = setInterval(() => {this.contadorSeg > 0 ? this.contadorSeg-- : clearInterval(this.myIntervalo) ;}, 1000);
     },
   },
 };
